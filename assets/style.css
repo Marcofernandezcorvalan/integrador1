@@ -37,13 +37,30 @@ body {
     background: var(--secondbackground);
     top: 0;
     position: fixed;
+    padding: 0px 40px;
 }
 
  /* LOGO  */
 
 .header__logo {
-    margin-left: 40px;
+    /* margin-left: 40px; */
     padding: 8px;
+    animation: boom 1.8s infinite;
+    transition: all ease-out;
+}
+
+@keyframes boom {
+    0% {
+        transform: scale(1.0);
+    }
+    
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
 }
 
 /* NAV  */
@@ -74,11 +91,24 @@ body {
     border-radius: 10px;
     color: var(--thirdtext);
     font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--thirdtext);
 }
+
 
 .header__nav__list--inicio:hover {
     background-color: var(--secondarytext);
-    color: #0D0D0D;
+    color: var(--background);
+    transition: all 0.3s ease-in-out;
+    /* transform:scale(0.8); */
+}
+
+.inicio {
+    transition: all 0.3s ease-in-out;
+}
+
+.inicio:hover {
+    transform:scale(0.8);
     transition: all 0.3s ease-in-out;
 }
 
@@ -92,7 +122,8 @@ body {
     gap: 40px;
     justify-content: center;
     align-items: center;
-    margin-right: 40px;
+    /* margin-right: 40px; */
+    width: 20%;
 }
 
 .header__cont--login {
@@ -101,6 +132,8 @@ body {
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
     font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid var(--thirdtext);
 }
 
 .header__cont--login:hover {
@@ -116,13 +149,15 @@ body {
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
     font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .header__cont--register:hover {
     color: var(--secondarytext);
     background-color: var(--background);
-    transform:scale(1.1);
+    transform:scale(0.9);
     transition: all 0.3s ease;
+    border: 1px solid var(--thirdtext);;
 }
 
 .header__cont--user {
