@@ -35,7 +35,7 @@ body {
     width: 300px;
     height: 480px;
     background: var(--secondbackground);
-    margin-top: 120px;
+    margin-top: 50px;
     border-radius: 10px;
     gap: 30px;
 }
