@@ -68,6 +68,25 @@ body {
     }
 }
 
+/* hambur  */
+    .menuLabel {
+        display: none;
+    }
+    #menuToggle {
+        display: none;
+    }
+/* hambur  */
+
+/* user  */
+    .menuUser{
+        display: none;
+    }
+
+    #menuUser {
+        display: none;
+    }
+/* user */
+
 /* NAV  */
 
 .header__nav {
@@ -127,7 +146,7 @@ body {
     gap: 40px;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 30%;
 }
 
 .header__cont--login {
@@ -490,5 +509,15 @@ main {
     color: var(--thirdtext);
     font-weight: 500;
     font-size: 15px;
+}
+
+/* FOOTER  */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
