@@ -107,6 +107,16 @@ body {
 .header__nav__list--a {
     color:var(--thirdtext);
     font-weight: 500;
+    
+}
+
+.a {
+    transition: all 0.3s ease-in-out;
+}
+
+.a:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
 }
 
 .header__nav__list--inicio {
@@ -426,6 +436,10 @@ main {
     width: 100%;
 }
 
+.contactus__title {
+    font-size: 32px;
+}
+
 .contactus__container {
     display: flex;
     align-items: center;
@@ -509,15 +523,33 @@ main {
     color: var(--thirdtext);
     font-weight: 500;
     font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.contactus__container__social__cont__rs:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.1);
 }
 
 /* FOOTER  */
 
-footer {
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+    background-color: var(--background);
+    margin-top: 150px;
+    margin-bottom: 50px;
+    gap: 30px;
+}   
 
+.footer__img {
+    height: 30px;
+}
+
+.footer__text {
+    font-size: 12px;
 }
 
