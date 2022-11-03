@@ -32,6 +32,11 @@
         background-color: var(--secondbackground);
     }
 
+    .header__nav {
+        width: 70%;
+        justify-content: end;
+    }
+
     .menuLabel {
         display: flex;
         cursor: pointer;
@@ -106,7 +111,7 @@
     }
 
     .hero__info--h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .hero__info--p {
@@ -174,4 +179,134 @@
 
 
 
+}
+
+@media screen and (max-width: 768px) {
+
+    /* HEADER  */
+
+    .header {
+        gap: 20px;
+    }
+
+    /* HERO  */
+
+    .hero__info--h1 {
+        font-size: 35px;
+    }
+
+    .hero__info--p {
+        font-size: 14px;
+    }
+
+    /* HERO  */
+
+    /* BENEFITS  */
+
+    .benefits__container {
+        gap: 15px;
+        width: 95%;
+    }
+
+    .benefits__title {
+        font-size: 25px;
+    }
+
+    .benefits__container__card {
+        width: 40%;
+        padding: 0px 15px;
+        gap: 10px;
+        height: 200px;
+    }
+
+    .benefits__container__card__title {
+        flex-wrap: unset;
+        /* align-self:initial; */
+    }
+
+    .benefits__container__card p {
+        font-size: 9px;   
+    }
+
+    .benefits__container__card__title h3 {
+        font-size: 20px;
+       
+    }
+
+    /* BENEFITS  */
+
+    /* PRODUCTS  */
+
+    #products {
+        gap: 10px;
+    }
+
+    .products__title {
+        font-size: 25px;
+    }
+
+    .products__container {
+        gap: 10px;
+    }
+
+    .products__container__card {
+        height: 160px;
+        width: 25%;
+    }
+
+    .products__container__card__title {
+        font-size: 11px;
+    }
+
+    .products__container__card__scont p {
+        font-size: 10px;
+    }
+
+    .products__container__card__scont--btn {
+        padding: 5px;
+        height: 25px;
+        width: 45px;
+        font-size: 10px;
+    }
+
+    /* PRODUCTS  */
+
+    /* CONTACT US  */
+
+    .contactus__title {
+        font-size: 25px;
+    }
+
+    .contactus__container__form__title {
+        font-size: 13px;
+    }
+
+    .contactus__container__form--input {
+        width: 80%;
+        padding: 5px;
+        font-size: 10px;
+        border-radius: 5px;
+    }
+
+    .contactus__container__form--btn {
+        font-size: 10px;
+        width: 50px;
+    }
+
+    .contactus__container__social__title {
+        font-size: 13px;
+    }
+
+    .contactus__container__social__cont {
+        width: 50%;
+    }
+    
+    .contactus__container__social__cont__rs {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .contactus__container__social__cont__rs {
+        align-self: flex-end;
+    }
 }
