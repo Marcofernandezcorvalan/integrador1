@@ -18,7 +18,7 @@
 }
 
 html {
-    scroll-padding-top: 130px;
+    scroll-padding-top: 100px;
     scroll-behavior: smooth;
 }
 
@@ -142,7 +142,7 @@ body {
 }
 
 .inicio:hover {
-    transform:scale(0.8);
+    transform:scale(0.9);
     transition: all 0.3s ease-in-out;
 }
 
@@ -221,52 +221,53 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 400px;
-    margin-top: 100px;
+    width: 75%;
+    height: 410px;
+    margin-top: 50px;
     margin-bottom: 100px;
     max-width: 1200px;
-    background-color: #1f1f1f;
-    width: 90%;
-    border-radius: 10px;
+    
     gap: 30px;
     padding: 20px;
+    /* background: #1f1f1f; */
+    background-image: url(./img/rtx-portada.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    border-radius: 10px;
 }
 
-.hero__img {
-    width: 50%;
-    padding: 10px;
-}
-
-.hero__img--img {
-    width: 100%;
-    border-radius: 20px;
-}
-
-.hero__info {
+.hero__container {
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 45px;
-    height: 70%;
-    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 90%;
+    height: 90%;
 }
 
-.hero__info--h1 {
-    font-size: 35px;
+.hero__container--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text);
-    font-weight: 600;
+    font-weight: 900;
+    font-size: 20px;
+    border: 2px solid var(--text);
+    background-color: var(--background);
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
 }
 
-.hero__info--p {
-    color: var(--secondarytext);
-    text-align: justify;
-}
-
-.hero__info--p span {
-    font-weight: 500;
+.hero__container--btn:hover {
+    transition: all 0.3s ease-in;
+    transform: scale(0.9);
+    background-color: rgb(27, 58, 29);
+    border: 2px solid var(--text);
     color: var(--text);
+    font-weight: 900;
 }
+
 
 /* BENEFITS  */
 
