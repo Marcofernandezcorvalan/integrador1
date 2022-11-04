@@ -18,7 +18,7 @@
 }
 
 html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: 150px;
     scroll-behavior: smooth;
 }
 
@@ -154,7 +154,7 @@ body {
 .header__cont {
     display: flex; 
     gap: 40px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 30%;
 }
@@ -223,7 +223,7 @@ main {
     align-items: center;
     width: 75%;
     height: 410px;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 100px;
     max-width: 1200px;
     
