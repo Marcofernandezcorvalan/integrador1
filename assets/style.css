@@ -250,10 +250,10 @@ main {
     align-items: center;
     justify-content: center;
     color: var(--text);
-    font-weight: 900;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 15px;
     border: 2px solid var(--text);
-    background-color: var(--background);
+    background-image: linear-gradient(to right ,rgb(6, 171, 6),rgb(28, 28, 28));
     padding: 5px;
     border-radius: 10px;
     transition: all 0.3s ease-in;
@@ -262,7 +262,7 @@ main {
 .hero__container--btn:hover {
     transition: all 0.3s ease-in;
     transform: scale(0.9);
-    background-color: rgb(27, 58, 29);
+    /* background-color: rgb(27, 58, 29); */
     border: 2px solid var(--text);
     color: var(--text);
     font-weight: 900;
@@ -449,6 +449,7 @@ main {
     background-color: var(--secondbackground);
     padding: 20px;
     border-radius: 10px;
+    gap: 50px;
 }
 
 .contactus__container__img {
@@ -456,17 +457,26 @@ main {
     width: 40%;
 }
 
+.contactus__container__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    width: 70%;
+}
+
 .contactus__container__form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 30%;
+    width: 60%;
     gap: 10px;
 }
 
 .contactus__container__form--input {
     padding: 10px;
+    width: 50%;
     border-radius: 8px;
     background: var(--secondbackground);
     color: var(--text);
