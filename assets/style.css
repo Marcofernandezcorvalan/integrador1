@@ -126,7 +126,7 @@ body {
     color: var(--thirdtext);
     font-weight: 600;
     transition: all 0.3s ease-in-out;
-    border: 1px solid var(--thirdtext);
+    /* border: 1px solid var(--thirdtext); */
 }
 
 
@@ -166,7 +166,7 @@ body {
     border-radius: 10px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 1px solid var(--thirdtext);
+    /* border: 1px solid var(--thirdtext); */
 }
 
 .header__cont--login:hover {
@@ -190,7 +190,7 @@ body {
     background-color: var(--background);
     transform:scale(0.9);
     transition: all 0.3s ease;
-    border: 1px solid var(--thirdtext);;
+    /* border: 1px solid var(--thirdtext); */
 }
 
 /* CONT  */
@@ -434,7 +434,7 @@ main {
     gap: 60px;
     margin-top: 150px;
     margin-bottom: 100px;
-    width: 100%;
+    width: 95%;
 }
 
 .contactus__title {
@@ -490,7 +490,7 @@ main {
     border-radius: 10px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 1px solid var(--thirdtext);
+    border: 1px solid var(--background);
     cursor: pointer;
 }
 
@@ -562,5 +562,16 @@ main {
 
 .footer__text {
     font-size: 12px;
+}
+
+.footer__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__list__text {
+    font-size: 10px;
 }
 

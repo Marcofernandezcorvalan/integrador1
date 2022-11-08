@@ -35,7 +35,7 @@ body {
     width: 300px;
     height: 400px;
     background: var(--secondbackground);
-    margin-top: 80px;
+    margin-top: 120px;
     border-radius: 10px;
     gap: 30px;
 }
@@ -64,6 +64,7 @@ body {
     color: var(--text);
     border: 1px solid #9bd23d74;
     transition: all 0.3s ease;
+    width: 80%;
 }
 
 .container__form__input--input:hover {
