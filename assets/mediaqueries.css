@@ -435,6 +435,10 @@
 
 
 @media screen and (max-width: 395px) {
+    /* LOGIN  */
+    .container {
+        margin-top: 60px;
+    }
 
     /* HEADER  */
 
