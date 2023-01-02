@@ -106,8 +106,14 @@
 
       <section id="products">
         <h2 class="products__title">Productos</h2>
+        <div class="products__categories">
+          <button class="products__categories__category act">All</button>
+          <button class="products__categories__category" data-category="expensive">Expensive</button>
+          <button class="products__categories__category" data-category="accessible">Accessible</button>
+          <button class="products__categories__category" data-category="economic">Economic</button>
+        </div>
         <div class="products__container">
-          <div class="products__container__card">
+          <!-- <div class="products__container__card">
             <img class="products__container__card__img" src="./assets/img/rtx4090.jpg" alt="grafica" />
             <h3 class="products__container__card__title">GeForce RTX 4090</h3>
             <div class="products__container__card__scont">
@@ -138,10 +144,10 @@
               <p>U$D 1300</p>
               <a class="products__container__card__scont--btn" href="#">Buy</a>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="products__container">
-          <div class="products__container__card">
+          <!-- <div class="products__container__card">
             <img class="products__container__card__img" src="./assets/img/rtx3080ti.png" alt="grafica" />
             <h3 class="products__container__card__title">GeForce RTX 3080 TI</h3>
             <div class="products__container__card__scont">
@@ -172,7 +178,7 @@
               <p>U$D 800</p>
               <a class="products__container__card__scont--btn" href="#">Buy</a>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -230,5 +236,8 @@
         <li class="footer__list__text">Marcas Registradas</li>
       </ul>
     </footer>
+    <div class="modal"></div>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
