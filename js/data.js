@@ -25,7 +25,7 @@ const infoProducts = [
     name: "GeForce RTX 3090",
     precio: 1300,
     category: "accessible",
-    img: "./assets/img/rtx4090.jpg",
+    img: "./assets/img/rtx3090.jpg",
   },
   {
     id: 5,
@@ -50,10 +50,10 @@ const infoProducts = [
   },
   {
     id: 8,
-    name: "./assets/img/rtx3070-2.jpg",
+    name: "GeFoce RTX 3070",
     precio: 800,
     category: "economic",
-    img: "./assets/img/rtx4090.jpg",
+    img: "./assets/img/rtx3070-2.jpg",
   },
 ];
 

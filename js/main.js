@@ -15,6 +15,8 @@ const saveLocalStorage = (carritoLista) => {
   localStorage.setItem("carrito", JSON.stringify(carritoLista));
 };
 
+// Renderizar los Productos
+
 const mostrarProducto = (product) => {
   const { id, name, precio, img } = product;
   return `
@@ -24,7 +26,8 @@ const mostrarProducto = (product) => {
             <div class="products__container__card__scont">
               <p>U$D ${precio}</p>
               <button class="products__container__card__scont--btn" data-id="${id}" data-name="${name}" data-img="${img}" >Buy</button>
-    </div>
+            </div>
+    </div>        
     `;
 };
 
@@ -32,15 +35,63 @@ const renderizarProductosDivididos = (index = 0) => {
   products.innerHTML += controladorProductos.productosDivididos[index].map(mostrarProducto).join("");
 };
 
+// filtrar los productos por categoria
+
+const renderizarProductosFiltrados = (category) => {
+  const listaProd = infoProducts.filter((product) => product.category === category);
+
+  products.innerHTML = listaProd.map(mostrarProducto).join("");
+};
+
 const renderizarProductos = (index = 0, category = undefined) => {
   if (!category) {
     renderizarProductosDivididos();
     return;
   }
+  renderizarProductosFiltrados(category);
+};
+
+// Categorias
+
+const CambiarBtnMore = (category) => {
+  if (!category) {
+    btnMore.classList.remove("hidden");
+    return;
+  }
+  btnMore.classList.add("hidden");
+};
+
+const cambiarBtnAct = (categoriaSelec) => {
+  const categories = [...categoriesData];
+  categories.forEach((btn) => {
+    if (btn.dataset.category !== categoriaSelec) {
+      btn.classList.remove("act");
+      return;
+    }
+    btn.classList.add("act");
+  });
+};
+
+const cambiarFiltro = (e) => {
+  const categoriaSelec = e.target.dataset.category;
+  cambiarBtnAct(categoriaSelec);
+  CambiarBtnMore(categoriaSelec);
+};
+
+const aplicarFiltro = (e) => {
+  if (!e.target.classList.contains("products__categories__category")) return;
+  cambiarFiltro(e);
+  if (!e.target.dataset.category) {
+    products.innerHTML = "";
+    renderizarProductos();
+  } else {
+    renderizarProductos(0, e.target.dataset.category);
+  }
 };
 
 const init = () => {
   renderizarProductos();
+  categories.addEventListener("click", aplicarFiltro);
 };
 
 init();

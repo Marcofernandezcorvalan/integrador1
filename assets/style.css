@@ -366,6 +366,10 @@ main {
   transition: all 0.3s ease;
 }
 
+.hidden {
+  display: none;
+}
+
 .act {
   background: var(--secondarytext);
   color: var(--background);
@@ -437,6 +441,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .products__container__card__scont--btn:hover {
@@ -444,6 +449,19 @@ main {
   color: var(--background);
   transition: all 0.3s ease-in-out;
   font-weight: 600;
+}
+
+/* BTN MORE */
+
+.btn-more {
+  background-color: var(--secondarytext);
+  color: var(--background);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-weight: 600;
+  border: 1px solid var(--thirdtext);
+  font-size: 13px;
+  margin-top: 30px;
 }
 
 /* CONTACT US  */
