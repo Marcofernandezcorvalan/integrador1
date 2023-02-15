@@ -57,18 +57,18 @@ const infoProducts = [
   },
 ];
 
-// more
+// const separarProductos = (size) => {
+//   let productosDivididos = [];
+//   for (let i = 0; i < infoProducts.length; i += size) {
+//     productosDivididos.push(infoProducts.slice(i, i + size));
+//   }
+//   return productosDivididos;
+// };
 
-const separarProductos = (size) => {
-  let productosDivididos = [];
-  for (let i = 0; i < infoProducts.length; i += size) {
-    productosDivididos.push(infoProducts.slice(i, i + size));
-  }
-  return productosDivididos;
-};
+// const controladorProductos = {
+//   productosDivididos: separarProductos(4),
+//   sigProductosIndex: 1,
+//   limiteProductos: separarProductos(4).length,
+// };
 
-const controladorProductos = {
-  productosDivididos: separarProductos(4),
-  sigProductosIndex: 1,
-  limiteProductos: separarProductos(4).length,
-};
+// console.log(controladorProductos);

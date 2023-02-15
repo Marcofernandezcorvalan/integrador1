@@ -31,8 +31,8 @@ const mostrarProducto = (product) => {
     `;
 };
 
-const renderizarProductosDivididos = (index = 0) => {
-  products.innerHTML += controladorProductos.productosDivididos[index].map(mostrarProducto).join("");
+const renderizarProductosTodos = (index = 0) => {
+  products.innerHTML += infoProducts.map(mostrarProducto).join("");
 };
 
 // filtrar los productos por categoria
@@ -45,7 +45,7 @@ const renderizarProductosFiltrados = (category) => {
 
 const renderizarProductos = (index = 0, category = undefined) => {
   if (!category) {
-    renderizarProductosDivididos();
+    renderizarProductosTodos();
     return;
   }
   renderizarProductosFiltrados(category);
@@ -53,13 +53,13 @@ const renderizarProductos = (index = 0, category = undefined) => {
 
 // Categorias
 
-const CambiarBtnMore = (category) => {
-  if (!category) {
-    btnMore.classList.remove("hidden");
-    return;
-  }
-  btnMore.classList.add("hidden");
-};
+// const CambiarBtnMore = (category) => {
+//   if (!category) {
+//     btnMore.classList.add("hidden");
+//     return;
+//   }
+//   btnMore.classList.add("hidden");
+// };
 
 const cambiarBtnAct = (categoriaSelec) => {
   const categories = [...categoriesData];
@@ -75,7 +75,7 @@ const cambiarBtnAct = (categoriaSelec) => {
 const cambiarFiltro = (e) => {
   const categoriaSelec = e.target.dataset.category;
   cambiarBtnAct(categoriaSelec);
-  CambiarBtnMore(categoriaSelec);
+  // CambiarBtnMore(categoriaSelec);
 };
 
 const aplicarFiltro = (e) => {
@@ -89,9 +89,23 @@ const aplicarFiltro = (e) => {
   }
 };
 
+const checkUltArray = () => {
+  controladorProductos.sigProductosIndex === controladorProductos.limiteProductos;
+};
+
+// función mostrar más
+
+// const mostrarMas = () => {
+//   renderizarProductos(controladorProductos.sigProductosIndex);
+//   // if (checkUltArray()) {
+//   //   btnMore.classList.add("hidden");
+//   // }
+// };
+
 const init = () => {
   renderizarProductos();
   categories.addEventListener("click", aplicarFiltro);
+  btnMore.addEventListener("click", mostrarMas);
 };
 
 init();
