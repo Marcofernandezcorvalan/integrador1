@@ -8,6 +8,18 @@ const categoriesData = document.querySelectorAll(".products__categories__categor
 const btnMore = document.querySelector(".btn-more");
 // modal
 const modal = document.querySelector(".modal");
+// menu hamburguesa
+const hamBtn = document.querySelector(".menuLabel");
+// nav list
+const barsMenu = document.querySelector(".header__nav__list");
+// menu User
+const menuUser = document.querySelector(".menuUser");
+// login y register
+const logReg = document.querySelector(".header__cont");
+// cart
+const cart = document.querySelector(".cartLabel");
+// cart Container
+const cartCont = document.querySelector(".cart");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -102,10 +114,71 @@ const checkUltArray = () => {
 //   // }
 // };
 
+const toggleMenu = () => {
+  barsMenu.classList.toggle("openMenu");
+  if (logReg.classList.contains("openMenu")) {
+    logReg.classList.remove("openMenu");
+    return;
+  }
+  if (cartCont.classList.contains("openCart")) {
+    cartCont.classList.remove("openCart");
+    return;
+  }
+};
+
+const toggleUser = () => {
+  logReg.classList.toggle("openMenu");
+  if (barsMenu.classList.contains("openMenu")) {
+    barsMenu.classList.remove("openMenu");
+    return;
+  }
+  if (cartCont.classList.contains("openCart")) {
+    cartCont.classList.remove("openCart");
+    return;
+  }
+};
+
+const toggleCart = () => {
+  cartCont.classList.toggle("openCart");
+  if (barsMenu.classList.contains("openMenu")) {
+    barsMenu.classList.remove("openMenu");
+    return;
+  }
+  if (logReg.classList.contains("openMenu")) {
+    logReg.classList.remove("openMenu");
+    return;
+  }
+};
+
+const cerrar = (e) => {
+  if (!e.target.classList.contains("link")) {
+    return;
+  }
+  barsMenu.classList.remove("openMenu");
+};
+
+const cerrarEnScrolleo = () => {
+  if (
+    !barsMenu.classList.contains("openMenu") &&
+    !cartCont.classList.contains("openCart") &&
+    !logReg.classList.contains("openMenu")
+  ) {
+    return;
+  }
+  barsMenu.classList.remove("openMenu");
+  cartCont.classList.remove("openCart");
+  logReg.classList.remove("openMenu");
+};
+
 const init = () => {
   renderizarProductos();
   categories.addEventListener("click", aplicarFiltro);
-  btnMore.addEventListener("click", mostrarMas);
+  // btnMore.addEventListener("click", mostrarMas);
+  hamBtn.addEventListener("click", toggleMenu);
+  menuUser.addEventListener("click", toggleUser);
+  cart.addEventListener("click", toggleCart);
+  barsMenu.addEventListener("click", cerrar);
+  window.addEventListener("scroll", cerrarEnScrolleo);
 };
 
 init();

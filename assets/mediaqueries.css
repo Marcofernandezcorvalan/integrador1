@@ -48,9 +48,9 @@
     height: 25px;
   }
 
-  #menuToggle:checked + .header__nav__list {
+  /* #menuToggle:checked + .header__nav__list {
     display: flex;
-  }
+  } */
 
   .header__cont {
     display: none;
@@ -84,9 +84,13 @@
     height: 22px;
   }
 
-  #menuUser:checked + .header__cont {
+  .openMenu {
     display: flex;
   }
+
+  /* #menuUser:checked + .header__cont {
+    display: flex;
+  } */
 
   /* HEADER  */
 
