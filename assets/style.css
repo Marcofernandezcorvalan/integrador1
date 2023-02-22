@@ -91,17 +91,19 @@ body {
 
 .cart {
   position: absolute;
-  top: 50px;
+  top: 60px;
   right: 0;
-  padding: 50px 30px;
+  padding: 30px 20px;
   background: var(--secondbackground);
   display: flex;
   flex-direction: column;
+  /* width: 250px; */
   gap: 20px;
   height: calc(100vh - 40px);
   z-index: 2;
   overflow-y: scroll;
   display: none;
+  border-left: 1px solid var(--background);
 }
 
 /* cartScroll  */
@@ -113,54 +115,71 @@ body {
 /* Cart h2  */
 
 .cart h2 {
-  color: #d0d0d0;
-  font-size: 25px;
+  color: var(--thirdtext);
+  font-size: 20px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Cart Item  */
+
+.cardsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emptyMsg {
+  font-size: 10px;
+  color: var(--thirdtext);
+}
 
 .cartItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  border: 2px solid rgb(2, 2, 2);
-  border-radius: 20px;
-  height: 100px;
-  width: 300px;
-  background: rgba(255, 255, 255, 0.359);
-  padding: 20px;
+  flex-direction: column;
+  gap: 5px;
+  /* border: 2px solid rgb(2, 2, 2); */
+  border-radius: 10px;
+  width: 250px;
+  background: var(--background);
+  padding: 10px;
 }
 
 .cartItem img {
-  height: 100%;
+  /* height: ; */
+  width: 95%;
+  border-radius: 10px;
 }
 
 /* Item   */
 
 .itemInfo {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
+  width: 95%;
   text-align: center;
 }
 
 .itemTitle {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
+  color: var(--thirdtext);
 }
 
 .itemP {
-  font-size: 13px;
+  font-size: 10px;
   text-align: center;
 }
 
 .itemPrecio {
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 800;
 }
 
@@ -169,6 +188,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  font-size: 10px;
 }
 
 .cantidadNum {
@@ -178,13 +198,15 @@ body {
   padding: 2px 10px;
   border-radius: 20px;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .rest {
-  background: rgba(255, 255, 255, 0.768);
+  background: var(--thirdtext);
   border: 1px solid #000000;
   cursor: pointer;
+  font-size: 10px;
+  color: var(--background);
 }
 
 .rest:hover {
@@ -193,9 +215,11 @@ body {
 }
 
 .sum {
-  background: rgba(255, 255, 255, 0.768);
+  background: var(--thirdtext);
   border: 1px solid #000000;
   cursor: pointer;
+  font-size: 10px;
+  color: var(--background);
 }
 
 .sum:hover {
@@ -214,9 +238,7 @@ body {
 
 .cartTotal {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-self: flex-end;
   color: rgba(255, 255, 255, 0.768);
 }
 
@@ -225,14 +247,14 @@ body {
   font-weight: 800;
 }
 
-.cartTotal span {
+.total {
   font-size: 20px;
   font-weight: 600;
 }
 
 /* Boton Cart  */
 
-.botonCart {
+.botonCartBuy {
   color: rgb(255, 255, 255);
   font-size: 15px;
   border: 1px solid rgb(71, 71, 71);
@@ -245,7 +267,25 @@ body {
   cursor: pointer;
 }
 
-.botonCart:hover {
+.botonCartBuy:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.botonCartClean {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  border: 1px solid rgb(71, 71, 71);
+  width: 150px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(11, 11, 11, 0.618);
+  padding: 3px 5px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.botonCartClean:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
@@ -272,6 +312,10 @@ body {
   display: none;
 }
 /* user */
+.disabled {
+  cursor: not-allowed;
+  color: rgba(255, 58, 58, 0.328);
+}
 
 /* NAV  */
 
@@ -801,4 +845,24 @@ main {
 
 .footer__list__text {
   font-size: 10px;
+}
+
+.modal {
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondbackground);
+  background: var(--secondarytext);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.3s ease-out;
+  transform: translateY(200%);
+  font-weight: 800;
+}
+
+.modalActivo {
+  transform: translateY(0);
+  transition: all 0.3s ease-in;
 }
