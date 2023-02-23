@@ -93,6 +93,7 @@ const agregarProducto = (e) => {
   if (!e.target.classList.contains("products__container__card__scont--btn")) {
     return;
   }
+
   const { id, name, img, precio } = e.target.dataset;
   const product = productsData(id, name, img, precio);
 
@@ -141,6 +142,26 @@ const crearCardCarrito = (product) => {
       quantity: 1,
     },
   ];
+};
+
+const vaciarCarrito = () => {
+  carrito = [];
+  checkCart();
+};
+
+const confirm = (confirmMsg) => {
+  if (!carrito.length) return;
+  if (window.confirm(confirmMsg)) {
+    vaciarCarrito();
+  }
+};
+
+const completarCompra = () => {
+  confirm("¿Desea completar la Compra?");
+};
+
+const btnVaciarCarrito = () => {
+  confirm("¿Desea eliminar los productos?");
 };
 
 // Renderizar los Productos
@@ -300,6 +321,8 @@ const init = () => {
   document.addEventListener("DOMContentLoaded", desabilitarBtn(BuyBtn));
   document.addEventListener("DOMContentLoaded", desabilitarBtn(CleanBtn));
   products.addEventListener("click", agregarProducto);
+  BuyBtn.addEventListener("click", completarCompra);
+  CleanBtn.addEventListener("click", btnVaciarCarrito);
 };
 
 init();

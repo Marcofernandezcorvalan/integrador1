@@ -167,13 +167,33 @@
   .contactus__container__form--input {
     width: 65%;
   }
+
+  /* CARRITO */
+
+  .cart {
+    top: 50px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .header__nav__list {
+    left: 50%;
+    width: 50%;
+  }
+
+  .header__cont {
+    left: 50%;
+    width: 50%;
+  }
+
   /* HEADER  */
 
   .header {
     gap: 20px;
+  }
+
+  .header__nav {
+    width: 50%;
   }
 
   /* HERO  */
@@ -189,6 +209,7 @@
   .benefits__container {
     gap: 15px;
     width: 95%;
+    flex-wrap: wrap;
   }
 
   .benefits__title {
@@ -207,8 +228,8 @@
     /* align-self:initial; */
   }
 
-  .benefits__container__card p {
-    font-size: 9px;
+  .benefits__container p {
+    font-size: 10px;
   }
 
   .benefits__container__card__title h3 {
@@ -218,6 +239,15 @@
   /* BENEFITS  */
 
   /* PRODUCTS  */
+
+  .products__categories {
+    width: 90%;
+  }
+
+  .products__categories__category {
+    width: 20%;
+    font-size: 13px;
+  }
 
   #products {
     gap: 10px;
@@ -316,11 +346,10 @@
   }
 
   .header__nav {
-    width: 60%;
+    width: 40%;
   }
 
   .header__nav__list {
-    display: none;
     position: absolute;
     margin-left: 0px;
     top: 50px;
@@ -332,14 +361,13 @@
   }
 
   .header__cont {
-    display: none;
     position: absolute;
     margin-left: 0px;
     top: 50px;
     left: 5%;
     right: 5%;
     width: 90%;
-    padding: 30px;
+    padding: 40px;
   }
 
   /* HERO  */
@@ -360,11 +388,23 @@
   }
 
   .benefits__container__card {
-    width: 60%;
-    height: 200px;
+    width: 70%;
+    height: 240px;
+  }
+
+  .benefits__container p {
+    font-size: 12px;
   }
 
   /* PRODUCTS  */
+
+  .products__categories {
+    width: 95%;
+  }
+
+  .products__categories__category {
+    font-size: 12px;
+  }
 
   .products__container {
     flex-direction: column;
@@ -429,7 +469,7 @@
   }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 420px) {
   /* LOGIN  */
   .container {
     margin-top: 60px;
@@ -437,7 +477,7 @@
 
   /* HEADER  */
   .header__nav {
-    width: 50%;
+    width: 30%;
   }
 
   /* HERO  */
@@ -460,7 +500,7 @@
   /* BENEFITS  */
 
   .benefits__container__card {
-    width: 70%;
+    width: 80%;
   }
 
   /* PRODUCTS  */
@@ -493,5 +533,11 @@
   .contactus__container__form--btn {
     font-size: 9px;
     width: 50px;
+  }
+
+  /* carrito */
+
+  .cart {
+    width: 100%;
   }
 }
