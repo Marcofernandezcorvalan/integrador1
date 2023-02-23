@@ -174,7 +174,7 @@ const mostrarProducto = (product) => {
             <h3 class="products__container__card__title">${name}</h3>
             <div class="products__container__card__scont">
               <p>U$D ${precio}</p>
-              <button class="products__container__card__scont--btn" data-id="${id}" data-name="${name}" data-img="${img}" >Buy</button>
+              <button class="products__container__card__scont--btn" data-id="${id}" data-name="${name}" data-img="${img}" data-precio="${precio}">Buy</button>
             </div>
     </div>        
     `;
