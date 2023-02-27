@@ -83,10 +83,17 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .carrito {
   height: 40px;
   padding: 5px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.carrito:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.9);
 }
 
 .cart {
@@ -134,7 +141,7 @@ body {
 
 .emptyMsg {
   font-size: 10px;
-  color: var(--thirdtext);
+  color: var(--text);
 }
 
 .cartItem {
@@ -231,7 +238,7 @@ body {
 
 .divider {
   margin-top: 20px;
-  border: 2px solid rgb(116, 116, 116);
+  border: 2px solid var(--background);
 }
 
 /* Cart Total  */
@@ -247,45 +254,47 @@ body {
 }
 
 .totalCont {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
 }
 
 /* Boton Cart  */
 
 .botonCartBuy {
-  color: rgb(255, 255, 255);
+  color: var(--thirdtext);
+  font-weight: 600;
   font-size: 15px;
   border: 1px solid rgb(71, 71, 71);
   width: 150px;
   text-align: center;
   border-radius: 4px;
-  background-color: rgba(11, 11, 11, 0.618);
+  background-color: var(--background);
   padding: 3px 5px;
   align-self: center;
   cursor: pointer;
 }
 
 .botonCartBuy:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.3s ease;
 }
 
 .botonCartClean {
-  color: rgb(255, 255, 255);
+  color: var(--thirdtext);
+  font-weight: 600;
   font-size: 15px;
   border: 1px solid rgb(71, 71, 71);
   width: 150px;
   text-align: center;
   border-radius: 4px;
-  background-color: rgba(11, 11, 11, 0.618);
+  background-color: var(--background);
   padding: 3px 5px;
   align-self: center;
   cursor: pointer;
 }
 
 .botonCartClean:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.3s ease;
 }
 
@@ -413,7 +422,7 @@ body {
 .header__cont--register:hover {
   color: var(--secondarytext);
   background-color: var(--background);
-  transform: scale(0.9);
+  transform: scale(0.93);
   transition: all 0.3s ease;
   /* border: 1px solid var(--thirdtext); */
 }
@@ -474,7 +483,6 @@ main {
   font-weight: 900;
   font-size: 15px;
   border: 2px solid var(--text);
-  /* background-image: linear-gradient(to right, rgb(6, 171, 6), rgb(28, 28, 28)); */
   padding: 5px;
   border-radius: 10px;
   transition: all 0.3s ease-in;
@@ -482,7 +490,7 @@ main {
 
 .hero__container--btn:hover {
   transition: all 0.3s ease-in;
-  transform: scale(0.9);
+  transform: scale(0.95);
   /* background-color: rgb(27, 58, 29); */
   border: 2px solid var(--text);
   color: var(--text);
@@ -845,6 +853,7 @@ main {
 
 .footer__list__text {
   font-size: 10px;
+  cursor: pointer;
 }
 
 .modal {

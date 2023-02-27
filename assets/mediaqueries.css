@@ -288,12 +288,12 @@
   .contactus__container {
     padding: 30px 20px;
     flex-direction: column;
-    padding: 40px;
+    padding: 30px 10px;
   }
 
   .contactus__container__img {
-    width: 90%;
-    height: 250px;
+    width: 95%;
+    height: 300px;
   }
 
   .contactus__container__actions {
@@ -507,7 +507,7 @@
 
   .products__container__card {
     width: 80%;
-    height: 240px;
+    height: 260px;
     padding: 10px;
   }
 

@@ -283,9 +283,9 @@ const aplicarFiltro = (e) => {
   }
 };
 
-const checkUltArray = () => {
-  controladorProductos.sigProductosIndex === controladorProductos.limiteProductos;
-};
+// const checkUltArray = () => {
+//   controladorProductos.sigProductosIndex === controladorProductos.limiteProductos;
+// };
 
 // función mostrar más
 
