@@ -29,7 +29,7 @@ const BuyBtn = document.querySelector(".botonCartBuy");
 // botón limpiar en el carrito
 const CleanBtn = document.querySelector(".botonCartClean");
 
-// Carrito
+// CARRITO
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -163,6 +163,51 @@ const completarCompra = () => {
 const btnVaciarCarrito = () => {
   confirm("¿Desea eliminar los productos?");
 };
+
+const btnEventMenos = (id) => {
+  const productoExistente = carrito.find((item) => {
+    return item.id === id;
+  });
+
+  if (productoExistente.quantity === 1) {
+    if (window.confirm("¿Quiere eliminar el producto?")) {
+      eliminarProductoCarrito(productoExistente);
+    }
+    return;
+  }
+  disminuirCantidad(productoExistente);
+};
+
+const eliminarProductoCarrito = (productoExistente) => {
+  carrito = carrito.filter((product) => product.id !== productoExistente.id);
+  checkCart();
+};
+
+const disminuirCantidad = (productoExistente) => {
+  carrito = carrito.map((product) => {
+    return product.id === productoExistente.id
+      ? { ...product, quantity: Number(product.quantity) - 1 }
+      : product;
+  });
+};
+
+const btnEventMas = (id) => {
+  const productoExistente = carrito.find((item) => {
+    return item.id === id;
+  });
+  agregarUnidadACard(productoExistente);
+};
+
+const controlCantidadCardCart = (e) => {
+  if (e.target.classList.contains("rest")) {
+    btnEventMenos(e.target.dataset.id);
+  } else if (e.target.classList.contains("sum")) {
+    btnEventMas(e.target.dataset.id);
+  }
+  checkCart();
+};
+
+// FIN DEL CARRITO
 
 // Renderizar los Productos
 
@@ -323,6 +368,7 @@ const init = () => {
   products.addEventListener("click", agregarProducto);
   BuyBtn.addEventListener("click", completarCompra);
   CleanBtn.addEventListener("click", btnVaciarCarrito);
+  cardsCont.addEventListener("click", controlCantidadCardCart);
 };
 
 init();
