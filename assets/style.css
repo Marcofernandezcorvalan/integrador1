@@ -521,6 +521,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  width: 95%;
 }
 
 .benefits__container__card {
@@ -858,7 +859,8 @@ main {
 
 .modal {
   display: flex;
-  padding: 10px 0px;
+  padding: 5px 0px;
+  font-size: 15px;
   align-items: center;
   justify-content: center;
   color: var(--secondbackground);
@@ -869,6 +871,7 @@ main {
   transition: all 0.3s ease-out;
   transform: translateY(200%);
   font-weight: 800;
+  z-index: 2;
 }
 
 .modalActivo {

@@ -131,7 +131,7 @@ const showSuccessModal = (msg) => {
   modal.textContent = msg;
   setTimeout(() => {
     modal.classList.remove("modalActivo");
-  }, 1000);
+  }, 900);
 };
 
 const crearCardCarrito = (product) => {
